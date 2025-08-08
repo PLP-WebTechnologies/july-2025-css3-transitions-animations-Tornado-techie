@@ -1,0 +1,111 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f3f3f3;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #7ec850;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  animation: fadeIn 2s ease-in;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.tip-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.tip-card:hover .hidden-content {
+  display: block;
+  animation: fadeIn 1s ease;
+}
+
+.hidden-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+.bounce-hover:hover {
+  animation: bounce 1s;
+}
+
+.fade-hover:hover {
+  animation: fadeIn 1s;
+}
+
+#quiz-section {
+  grid-column: 1 / -1;
+  background-color: #fff8dc;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.quiz-question {
+  margin-bottom: 1rem;
+}
+
+.quiz-question button {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #7ec850;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quiz-question button:hover {
+  background-color: #62a63f;
+}
+
+#quiz-result {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  background: #7ec850;
+  color: white;
+  padding: 1rem;
+  animation: slideUp 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-15px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-7px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
